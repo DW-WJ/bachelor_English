@@ -1,0 +1,212 @@
+// Prisma模式 - 学位英语学习平台
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// 用户模型
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  username  String   @unique
+  password  String
+  avatar    String?
+  level     String   @default("beginner") // beginner, intermediate, advanced
+  role      String   @default("student")  // student, teacher, admin
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // 关系
+  progress     LearningProgress[]
+  vocabulary   UserVocabulary[]
+  achievements UserAchievement[]
+  testRecords  TestRecord[]
+  studyGroups  StudyGroupMember[]
+
+  @@map("users")
+}
+
+// 词汇模型
+model Vocabulary {
+  id            String  @id @default(cuid())
+  word          String  @unique
+  pronunciation String?
+  meaning       String
+  partOfSpeech  String? // noun, verb, adjective, adverb, etc.
+  difficulty    Int     @default(1) // 1-5
+  examples      Json?   // 存储例句数组
+  audioUrl      String?
+  imageUrl      String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // 关系
+  userVocabulary UserVocabulary[]
+
+  @@map("vocabulary")
+}
+
+// 用户词汇学习记录
+model UserVocabulary {
+  id            String     @id @default(cuid())
+  userId        String
+  vocabularyId  String
+  masteryLevel  Int        @default(0) // 0-100
+  reviewCount   Int        @default(0)
+  correctCount  Int        @default(0)
+  lastReviewed  DateTime?
+  nextReview    DateTime?
+  isLearned     Boolean    @default(false)
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  // 关系
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  vocabulary Vocabulary @relation(fields: [vocabularyId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, vocabularyId])
+  @@map("user_vocabulary")
+}
+
+// 学习进度模型
+model LearningProgress {
+  id          String   @id @default(cuid())
+  userId      String
+  moduleType  String   // vocabulary, grammar, reading, writing, translation
+  moduleId    String   // 具体模块的ID
+  progress    Float    @default(0.0) // 0.0-1.0
+  completed   Boolean  @default(false)
+  score       Int?     // 测试分数
+  timeSpent   Int?     // 学习时间（秒）
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // 关系
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, moduleType, moduleId])
+  @@map("learning_progress")
+}
+
+// 成就模型
+model Achievement {
+  id          String   @id @default(cuid())
+  name        String
+  description String
+  icon        String?
+  points      Int      @default(0)
+  category    String   // vocabulary, grammar, streak, social, etc.
+  condition   Json?    // 成就条件
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+
+  // 关系
+  users UserAchievement[]
+
+  @@map("achievements")
+}
+
+// 用户成就关联
+model UserAchievement {
+  id            String      @id @default(cuid())
+  userId        String
+  achievementId String
+  earnedAt      DateTime    @default(now())
+
+  // 关系
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  achievement Achievement @relation(fields: [achievementId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, achievementId])
+  @@map("user_achievements")
+}
+
+// 测试记录模型
+model TestRecord {
+  id            String   @id @default(cuid())
+  userId        String
+  testType      String   // vocabulary, grammar, reading, writing, translation
+  testId        String   // 具体测试的ID
+  score         Int
+  totalQuestions Int
+  correctAnswers Int
+  timeSpent     Int      // 测试用时（秒）
+  answers       Json?    // 存储答案详情
+  completedAt   DateTime @default(now())
+
+  // 关系
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("test_records")
+}
+
+// 学习小组模型
+model StudyGroup {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  isPublic    Boolean  @default(true)
+  maxMembers  Int      @default(50)
+  createdBy   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // 关系
+  members StudyGroupMember[]
+
+  @@map("study_groups")
+}
+
+// 学习小组成员
+model StudyGroupMember {
+  id          String     @id @default(cuid())
+  userId      String
+  studyGroupId String
+  role        String     @default("member") // member, admin
+  joinedAt    DateTime   @default(now())
+
+  // 关系
+  user       User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  studyGroup StudyGroup @relation(fields: [studyGroupId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, studyGroupId])
+  @@map("study_group_members")
+}
+
+// 语法课程模型
+model GrammarLesson {
+  id          String   @id @default(cuid())
+  title       String
+  content     String   // 课程内容
+  level       Int      @default(1) // 1-5
+  category    String   // tense, voice, clause, etc.
+  examples    Json?    // 例句
+  exercises   Json?    // 练习题
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("grammar_lessons")
+}
+
+// 阅读理解文章模型
+model ReadingPassage {
+  id          String   @id @default(cuid())
+  title       String
+  content     String
+  level       Int      @default(1) // 1-5
+  category    String   // news, story, academic, etc.
+  wordCount   Int
+  questions   Json?    // 阅读理解题目
+  vocabulary  Json?    // 重点词汇
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("reading_passages")
+}
