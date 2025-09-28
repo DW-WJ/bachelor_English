@@ -20,8 +20,12 @@ export default function Home() {
               </Title>
             </div>
             <Space>
-              <Button type="text">登录</Button>
-              <Button type="primary">注册</Button>
+              <Link href="/login">
+                <Button type="text">登录</Button>
+              </Link>
+              <Link href="/register">
+                <Button type="primary">注册</Button>
+              </Link>
             </Space>
           </div>
         </div>

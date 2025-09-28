@@ -4,6 +4,7 @@ import './globals.css'
 import { AntdRegistry } from '@ant-design/nextjs-registry'
 import { ConfigProvider } from 'antd'
 import zhCN from 'antd/locale/zh_CN'
+import { AuthProvider } from '@/contexts/AuthContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -43,7 +44,9 @@ export default function RootLayout({
               },
             }}
           >
-            {children}
+            <AuthProvider>
+              {children}
+            </AuthProvider>
           </ConfigProvider>
         </AntdRegistry>
       </body>
