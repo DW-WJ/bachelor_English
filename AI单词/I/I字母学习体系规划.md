@@ -59,33 +59,34 @@
 - **学习重点**：injure/injury，inner，insect，inside，insist系列
 - **易混淆词**：injure vs injury, inquire vs inquiry, inn vs inner, innocent vs innovation
 
-### 单元6：instant - intention* （20个单词）
+### 单元6：instant - intention* （20个单词）✅
 - **单词范围**：instant - intention*
 - **单词列表**：instant, instead*, instinct, institute, institution*, instruct, instruction*, instrument*, insult*, insurance*, insure*, integrate, integrity, intelligence*, intelligent*, intend*, intense, intensity, intensive, intention*
 - **重点词汇**：10个（instead*, institution*, instruction*, instrument*, insult*, insurance*, insure*, intelligence*, intelligent*, intend*, intention*）
 - **学习重点**：instant/instead，instrument系列，intelligence系列，intend/intention
 - **易混淆词**：instant vs instead vs instinct, instruction vs instrument, insurance vs insure, intelligence vs intelligent, intend vs intention, intense vs intensive
 
-### 单元7：interact - introduction* （20个单词）
+### 单元7：interact - introduction* （20个单词）✅
 - **单词范围**：interact - introduction*
 - **单词列表**：interact, interaction, interest*, interesting*, interfere, interference, intermediate, international*, Internet, interpret, interpretation, interpreter, interrupt*, interruption, interval, interview, intimate, into*, introduce*, introduction*
 - **重点词汇**：7个（interest*, interesting*, international*, interrupt*, into*, introduce*, introduction*）
 - **学习重点**：interest系列，international/Internet，interrupt系列，introduce/introduction
 - **易混淆词**：interact vs interaction, interest vs interesting, interfere vs interference, interpret vs interpretation vs interpreter, interrupt vs interruption, introduce vs introduction
 
-### 单元8：invade - its* （20个单词）
+### 单元8：invade - its* （20个单词）✅
 - **单词范围**：invade - its*
 - **单词列表**：invade, invasion, invent*, invention, invest, investigate, investment, invisible, invitation*, invite*, involve*, inward(s)*, iron*, irrigate, island*, isolate, issue, it*, item, its*
 - **重点词汇**：8个（invent*, invitation*, invite*, involve*, inward(s)*, iron*, island*, it*, its*）
 - **学习重点**：invent系列，invite/invitation，involve，iron，island，it/its
 - **易混淆词**：invade vs invasion, invent vs invention, invest vs investigate vs investment, invitation vs invite, visible vs invisible, it vs its
 
-### 单元9：itself （1个单词）
+### 单元9：itself （1个单词）✅
 - **单词范围**：itself
 - **单词列表**：itself
 - **重点词汇**：0个
 - **学习重点**：反身代词
 - **易混淆词**：it vs its vs itself
+
 
 ### 调整说明
 经过精确统计，I字母实际共有**160个单词**（不是199个），因此调整为：
@@ -367,9 +368,9 @@
 ## 📈 学习进度跟踪
 
 ### 当前进度
-- **总进度**：62.5%（100/160）
-- **已完成单元**：5个（单元1-5）
-- **剩余单元**：4个
+- **总进度**：100%（160/160）
+- **已完成单元**：9个（单元1-9）
+- **剩余单元**：0个
 
 ### 学习计划
 - **每日目标**：完成1个单元（20个单词）
@@ -385,11 +386,11 @@
 | 单元3 | 20个 | 8个 | 60-90分钟 | 15-25分钟 | ✅ 已完成 |
 | 单元4 | 20个 | 8个 | 60-90分钟 | 15-25分钟 | ✅ 已完成 |
 | 单元5 | 20个 | 6个 | 60-90分钟 | 15-20分钟 | ✅ 已完成 |
-| 单元6 | 20个 | 10个 | 60-90分钟 | 20-30分钟 | ⏸️ 待学习 |
-| 单元7 | 20个 | 7个 | 60-90分钟 | 15-20分钟 | ⏸️ 待学习 |
-| 单元8 | 20个 | 8个 | 60-90分钟 | 15-25分钟 | ⏸️ 待学习 |
-| 单元9 | 1个 | 0个 | 5-10分钟 | 2-5分钟 | ⏸️ 待学习 |
-| **总计** | **160个** | **65个** | **9-14小时** | **2-3.5小时** | **62.5%** |
+| 单元6 | 20个 | 10个 | 60-90分钟 | 20-30分钟 | ✅ 已完成 |
+| 单元7 | 20个 | 7个 | 60-90分钟 | 15-20分钟 | ✅ 已完成 |
+| 单元8 | 20个 | 8个 | 60-90分钟 | 15-25分钟 | ✅ 已完成 |
+| 单元9 | 1个 | 0个 | 5-10分钟 | 2-5分钟 | ✅ 已完成 |
+| **总计** | **160个** | **65个** | **9-14小时** | **2-3.5小时** | **100%** |
 
 ### 学习路径图
 
@@ -425,19 +426,19 @@
 
 ### 必需文件清单
 
-#### ✅ 已完成（6个）
+#### ✅ 已完成（10个）
 1. ✅ **I字母学习体系规划.md**（本文档）
 2. ✅ **I字母单词学习资料_完整版_单元1.md**
 3. ✅ **I字母单词学习资料_完整版_单元2.md**
 4. ✅ **I字母单词学习资料_完整版_单元3.md**
 5. ✅ **I字母单词学习资料_完整版_单元4.md**
 6. ✅ **I字母单词学习资料_完整版_单元5.md**
+7. ✅ **I字母单词学习资料_完整版_单元6.md**
+8. ✅ **I字母单词学习资料_完整版_单元7.md**
+9. ✅ **I字母单词学习资料_完整版_单元8.md**
+10. ✅ **I字母单词学习资料_完整版_单元9.md**
 
-#### ⏸️ 待制作（7个）
-7. ⏸️ **I字母单词学习资料_完整版_单元6.md** - instant - intention*
-8. ⏸️ **I字母单词学习资料_完整版_单元7.md** - interact - introduction*
-9. ⏸️ **I字母单词学习资料_完整版_单元8.md** - invade - its*
-10. ⏸️ **I字母单词学习资料_完整版_单元9.md** - itself
+#### ⏸️ 待制作（3个）
 11. ⏸️ **I字母学习完成总结报告.md**（必需）
 12. ⏸️ **I字母单词快速复习卡.md**（必需）
 13. ⏸️ **I字母易混淆单词对比.md**（推荐）
@@ -569,8 +570,8 @@ I字母单词中，大量以**in-**、**im-**、**inter-**、**intro-**前缀开
 - **单元数**：9个
 - **重点词汇**：65个（40.6%）
 - **普通词汇**：95个（59.4%）
-- **已完成**：单元1-5（100个单词，62.5%）
-- **待完成**：单元6-9（60个单词，37.5%）
+- **已完成**：单元1-9（160个单词，100%）
+- **待完成**：无（全部完成）
 
 ### 核心前缀（必须掌握）
 - **in-**：向内、在内、否定、加强
